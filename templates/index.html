@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Personalized Learning System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
+      <div class="container">
+        <a class="navbar-brand" href="/">AI Learning</a>
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="/dashboard">Dashboard</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h3 class="card-title">Personalized Learning Support System</h3>
+              <p class="text-muted">Enter your details and quiz score to get an AI-powered recommendation.</p>
+              <form action="/submit" method="post" class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label">Name</label>
+                  <input class="form-control" name="name" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Subject</label>
+                  <input class="form-control" name="subject" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Quiz Score (0-100)</label>
+                  <input class="form-control" type="number" min="0" max="100" name="score" required>
+                </div>
+                <div class="col-12">
+                  <button class="btn btn-primary">Get Learning Plan</button>
+                  <a href="/dashboard" class="btn btn-outline-secondary ms-2">View Dashboard</a>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="mt-3 text-center text-muted small">Built with Flask • SQLite • Bootstrap • Chart.js</div>
+        </div>
+      </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
