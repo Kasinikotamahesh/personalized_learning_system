@@ -22,6 +22,19 @@
     <main class="container">
       <div class="row justify-content-center">
         <div class="col-lg-8">
+          <!-- Breadcrumb -->
+          <nav aria-label="breadcrumb" class="mb-3">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="/">Home</a></li>
+              {% if page == 'dashboard' %}
+                <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+              {% elif page == 'result' %}
+                <li class="breadcrumb-item active" aria-current="page">Result</li>
+              {% else %}
+                <li class="breadcrumb-item active" aria-current="page">Home</li>
+              {% endif %}
+            </ol>
+          </nav>
           <div class="card shadow-sm">
             <div class="card-body">
               <h3 class="card-title">Personalized Learning Support System</h3>
